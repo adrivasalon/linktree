@@ -33,8 +33,8 @@ min-height: 100vh;
 }
 
             a:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.04);
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(1.04);
 }
 
 </style>
@@ -44,17 +44,20 @@ min-height: 100vh;
         <h1>Hola, soy Adri</h1>
         <p>Esta es mi primera página web.</p>
         <a href="https://www.linkedin.com/in/arivasalonso/" target="_blank">Mi LinkedIn</a>
-        <a href="https://github.com/arivas-web/" target="_blank">Mi GitHub</a>  
+        <a href="https://github.com/adrivasalon" target="_blank">Mi GitHub</a>  
         <a href="https://www.instagram.com/?hl=en" target="_blank">Mi Instagram</a>
 
 <script>
-    const nombre = "Adri";
-    const edad = 24
-    const red = "LinkedIn"
-    console.log ("Hola, soy "+ nombre + ".")
-    console.log ("Tengo " + edad + " años.")
-    console.log ("Sigueme en LinkedIn")
-    
+    const enlaces = [
+        {titulo: "Mi linkedin", url: "https://www.linkedin.com/in/arivasalonso/"},
+        {titulo:"Mi GitHub", url:"https://github.com/adrivasalon"},
+        {titulo: "Mi instagram", url:"https://instagram.com"}
+];
+
+    console.log("Visita " + (enlaces[1].titulo ) + " en " + (enlaces[1].url))
+    console.log(enlaces[1].titulo);
+    console.log(enlaces[0].url);
+    console.log(enlaces[2].titulo);
 </script>
     </body>
 </html>
