@@ -43,21 +43,22 @@ min-height: 100vh;
         <img src="foto.jpg" alt="Mi foto">
         <h1>Hola, soy Adri</h1>
         <p>Esta es mi primera página web.</p>
-        <a href="https://www.linkedin.com/in/arivasalonso/" target="_blank">Mi LinkedIn</a>
-        <a href="https://github.com/adrivasalon" target="_blank">Mi GitHub</a>  
-        <a href="https://www.instagram.com/?hl=en" target="_blank">Mi Instagram</a>
-
+        <nav id="enlaces"></nav>
 <script>
     const enlaces = [
         {titulo: "Mi linkedin", url: "https://www.linkedin.com/in/arivasalonso/"},
         {titulo:"Mi GitHub", url:"https://github.com/adrivasalon"},
         {titulo: "Mi instagram", url:"https://instagram.com"}
 ];
+    const contenedor = document.getElementById("enlaces");
+    for (const enlace of enlaces) {
+        const boton = document.createElement("a");
+        boton.textContent = enlace.titulo;
+        boton.href = enlace.url;
+        boton.target = "_blank";
+        contenedor.appendChild(boton);
+    }
 
-    console.log("Visita " + (enlaces[1].titulo ) + " en " + (enlaces[1].url))
-    console.log(enlaces[1].titulo);
-    console.log(enlaces[0].url);
-    console.log(enlaces[2].titulo);
 </script>
     </body>
 </html>
